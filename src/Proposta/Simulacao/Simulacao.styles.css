@@ -1,0 +1,16 @@
+.simulacao {
+  border: 1px solid black;
+  padding: 5px;
+
+  .simulacao_form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .valor, .parcelas {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+    }
+  }
+}
