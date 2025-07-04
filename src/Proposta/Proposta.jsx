@@ -9,15 +9,16 @@ export const Proposta = () => {
 
   if(situacao === 'proposta_gerada') {
     return (
-      <div className="proposta">
+      <div className="proposta" data-testid="proposta_resultado_proposta">
         <div>Proposta gerada com sucesso!</div>
-        <button onClick={() => setSituacao('inicial')}>Nova Simulacao</button>
+        <button data-testid="proposta_resultado_nova_simulacao" onClick={() => setSituacao('inicial')}>Nova Simulacao</button>
       </div>
     )
   }
 
   return (
     <div className="proposta">
+    <h2>Simulador de Emprestimos</h2>
     <Simulacao onClickSimular={({parcelas, valor}) => {
       setValores({parcelas, valor});
       setSituacao('resultado_apresentacao');
